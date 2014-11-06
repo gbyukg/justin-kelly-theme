@@ -1,6 +1,8 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 
+// Customize table style
+
 $border-ep: #E0E0E0;
 html {
      background: image-url('background.png') repeat-x scroll center top $page-bg;
@@ -40,42 +42,88 @@ html {
       padding: .1em 0;
       line-height: 1.5em;
     }
-
-    li + li {
-      border-left: 0px solid $nav-border-left;
-      margin-left: .8em;
-      a {
-        padding-left: .8em;
-        border-left: 0px solid $nav-border-right;
-      }
-    }
-    form{
-        .search {
-          @include box-shadow(0px);
-        }
-    }
-
-  }
-
-  .blue_dark {
-      color: #5AA6F1;
-      text-shadow: 2px 2px 2px  #0F3B6A;
-      font-size:20px;
-  }
-  .blue_light {
-      text-shadow: 2px 2px 2px  #0F3B6A;
-      color: #A6CCFB;
-      font-size:20px;
-  }
-
-  .gist-highlight {
-      margin-bottom:0;
-  }
-
-  body {
-     > div {
-       border-bottom: 0px solid $page-border-bottom;
-   }
-
-
 }
+
+* + table {
+  border-style:solid;
+  border-width:1px;
+  border-color:#e7e3e7;
+  margin-bottom: 10px;
+}
+ 
+* + table th, * + table td {
+  border-style:dashed;
+  border-width:1px;
+  border-color:#e7e3e7;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+ 
+* + table th {
+  border-style:solid;
+  font-weight:bold;
+  background: url("/images/noise.png") repeat scroll left top #F7F3F7;
+}
+ 
+* + table th[align="left"], * + table td[align="left"] {
+  text-align:left;
+}
+ 
+* + table th[align="right"], * + table td[align="right"] {
+  text-align:right;
+}
+ 
+* + table th[align="center"], * + table td[align="center"] {
+  text-align:center;
+}
+
+
+
+
+
+
+p code, li code {
+  font-family: Menlo, Monaco, Consolas, Courier New, monospace;
+  font-size: 90%;
+  padding: 2px 4px;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+blockquote code {
+  background-color: #fff;
+}
+
+.oec2003right 
+{ 
+    background: #C3D9FF; 
+    height:120px; 
+    border:1px solid #BBBBBB; 
+}
+
+.oec2003right a:link 
+{ 
+    color: #0057b6; 
+    text-decoration: none; 
+} 
+.oec2003right a:visited 
+{ 
+    color: #0057b6; 
+    text-decoration: none; 
+} 
+.oec2003right a:active,a:hover 
+{ 
+    color: #0057b6; 
+    text-decoration: underline; 
+}
+
+#content article .cloud li{
+    display: inline;
+    list-style: none outside none;
+    padding: 0 4px;
+}
+
+@import "mixins";
+
