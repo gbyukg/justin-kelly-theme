@@ -2,6 +2,7 @@
 // Add styles here to make changes without digging in too much
 
 // Customize table style
+@import "mixins";
 
 $border-ep: #E0E0E0;
 html {
@@ -124,6 +125,4 @@ blockquote code {
     list-style: none outside none;
     padding: 0 4px;
 }
-
-@import "mixins";
 

@@ -24,7 +24,9 @@ add plugins
 [注释，警告高亮](https://github.com/aar0nTw/Ribbonp)  
 [提高索引速度](http://tonyarnold.com/2014/03/27/speeding-up-jekylls-latent-semantic-mapping.html)
 
-[为文章内容添加索引](http://brizzled.clapper.org/blog/2012/02/04/generating-a-table-of-contents-in-octopress/#styling)
+[为文章内容添加索引](http://brizzled.clapper.org/blog/2012/02/04/generating-a-table-of-contents-in-octopress/#styling)  
+不支持中文索引，需要手动添加ID，如：
+`<h1 id="测试">测试</h1>`
 
 ```
 {%ribbonp (info|warning) <custom title>%}
